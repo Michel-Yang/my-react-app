@@ -1,11 +1,15 @@
 import React from 'react';
-import CmtItem from '../compent/index'
+import CmtItem from '../compent/CmtItem'
 import '../CSS/CmtList.css'
+
+/* 评论列表组件 
+   定义标题
+   传递数据给子组件
+*/
 
 export default class CmtList extends React.Component{
     constructor(){
         super();
-
         this.state={
             CommentList:[
                 {id:1,user:"张三",content:"哈哈！123"},
@@ -13,11 +17,7 @@ export default class CmtList extends React.Component{
                 {id:3,user:"赵六",content:"哈哈！123"},
                 {id:4,user:"时代",content:"哈哈！123"},
                 {id:5,user:"中国",content:"哈哈！123"}
-            ],
-
-            text:""
-            
-
+            ]
         }
     }
     txtChange=(e)=>{
@@ -39,6 +39,7 @@ export default class CmtList extends React.Component{
         obj.content=this.state.text;
 
         this.state.CommentList.push(obj)
+        this.render();
 
         console.log(this.state.CommentList)
 

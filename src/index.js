@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 
-import CmtList  from './comment/index';
+import CmtList  from './comment/CmtList';
 
 import * as serviceWorker from './serviceWorker';
 
