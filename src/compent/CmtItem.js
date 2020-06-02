@@ -1,6 +1,9 @@
 import React from 'react';
-import '../CSS/CmtList.css'
-/* 评论项组件 接收福组件传入的参数props*/
+import '../CSS/CmtItem.css'
+/* 评论项组件 
+ * 渲染评论人和评论内容
+ * 接收参数 用户名 评论内容
+ * */
 export default class CmtItem extends React.Component{
     render(){
         return <div className='box'>

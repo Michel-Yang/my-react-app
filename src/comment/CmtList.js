@@ -3,9 +3,9 @@ import CmtItem from '../compent/CmtItem'
 import '../CSS/CmtList.css'
 
 /* 评论列表组件 
-   定义标题
-   传递数据给子组件
-*/
+ *  定义标题
+ *  传递数据给子组件
+ */
 
 export default class CmtList extends React.Component{
     constructor(){

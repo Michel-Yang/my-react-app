@@ -1,0 +1,13 @@
+/* 单个组件样式 */
+.box{
+    border:1px dashed #ccc;
+    box-shadow: 0 0 10px #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+.person{
+    font-size: 16px;
+}
+.content{
+    font-size: 14px;
+}
