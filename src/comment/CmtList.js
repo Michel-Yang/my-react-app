@@ -17,38 +17,41 @@ export default class CmtList extends React.Component{
                 {id:3,user:"赵六",content:"哈哈！123"},
                 {id:4,user:"时代",content:"哈哈！123"},
                 {id:5,user:"中国",content:"哈哈！123"}
-            ]
+            ],
+            text:'1111'
         }
     }
+   /*  获取表单输入值 */
     txtChange=(e)=>{
         let value=e.target.value;
         this.setState({
             text:value
         });
-
     }
 
     submit=()=>{
-
         var obj={
             id:6,
             user:"中国",
             content:""
         }
-
         obj.content=this.state.text;
 
         this.state.CommentList.push(obj)
-        this.render();
-
-        console.log(this.state.CommentList)
-
+        this.setState({
+            CommentList: this.state.CommentList
+        });
     }
     render(){
 
         return <div>
            <h1 className='title'>这是评论列表组件</h1>
+
+          {/*  渲染评论列表 */}
+
            { this.state.CommentList.map(item=><CmtItem {...item} key={item.id}></CmtItem>)}
+
+          {/*  表单提交 */}
 
            <div className='comment'>
                <input type="text" value={this.state.text} onChange={this.txtChange} ></input>
