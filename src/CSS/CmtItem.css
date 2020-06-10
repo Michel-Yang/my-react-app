@@ -4,6 +4,22 @@
     box-shadow: 0 0 10px #ccc;
     margin: 10px;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box .right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.del{
+	background:#fff;
+	width:80px;
+	height: 30px;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
 }
 .person{
     font-size: 16px;

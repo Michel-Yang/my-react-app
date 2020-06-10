@@ -29,6 +29,15 @@ export default class CmtList extends React.Component{
         });
     }
 
+    delItem=(index)=>{
+      let {CommentList}=this.state;
+
+      CommentList.splice(index,1);
+
+      this.setState({CommentList})
+
+    }
+
     submit=()=>{
         var obj={
             id:6,
@@ -49,7 +58,7 @@ export default class CmtList extends React.Component{
 
           {/*  渲染评论列表 */}
 
-           { this.state.CommentList.map(item=><CmtItem {...item} key={item.id}></CmtItem>)}
+           { this.state.CommentList.map((item,index)=><CmtItem {...item} key={item.id} delItem={this.delItem} index={index} ></CmtItem>)}
 
           {/*  表单提交 */}
 
