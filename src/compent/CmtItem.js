@@ -7,7 +7,6 @@ import '../css/CmtItem.css'
 export default class CmtItem extends React.Component{
 	delEvent=()=>{
 		this.props.delItem(this.props.index);
-		//console.log(11111)
 	}
     render(){
         return <div className='box'>
