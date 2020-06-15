@@ -1,7 +1,7 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import CmtList  from './comment/CmtList';
+import CmtList  from './views/CmtList';
 
 function App() {
   return (
