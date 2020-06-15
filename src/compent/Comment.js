@@ -1,7 +1,8 @@
 import React from 'react';
-/* 评论项组件 
- * 渲染评论人和评论内容
- * 接收参数 用户名 评论内容
+import '../css/Comment.css'
+/* 评论组件 
+ * 填写评论内容
+ * 提交评论内容
  * */
 export default class Comment extends React.Component{
 	state={

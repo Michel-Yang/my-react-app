@@ -40,12 +40,7 @@ export default class CmtList extends React.Component{
     }
 
     submit=(obj)=>{
-        // var obj={
-        //     id:6,
-        //     user:"中国",
-        //     content:""
-        // }
-        // obj.content=this.state.text;
+      
 
         this.state.CommentList.push(obj)
         this.setState({
