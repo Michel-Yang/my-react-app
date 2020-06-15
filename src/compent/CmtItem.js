@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/CmtItem.css'
+import '../css/CmtItem.css'
 /* 评论项组件 
  * 渲染评论人和评论内容
  * 接收参数 用户名 评论内容

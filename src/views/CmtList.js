@@ -1,6 +1,7 @@
 import React from 'react';
 import CmtItem from '../compent/CmtItem'
-import '../CSS/CmtList.css'
+import Comment from '../compent/Comment'
+import '../css/CmtList.css'
 
 /* 评论列表组件 
  *  定义标题
@@ -38,13 +39,13 @@ export default class CmtList extends React.Component{
 
     }
 
-    submit=()=>{
-        var obj={
-            id:6,
-            user:"中国",
-            content:""
-        }
-        obj.content=this.state.text;
+    submit=(obj)=>{
+        // var obj={
+        //     id:6,
+        //     user:"中国",
+        //     content:""
+        // }
+        // obj.content=this.state.text;
 
         this.state.CommentList.push(obj)
         this.setState({
@@ -58,14 +59,11 @@ export default class CmtList extends React.Component{
 
           {/*  渲染评论列表 */}
 
-           { this.state.CommentList.map((item,index)=><CmtItem {...item} key={item.id} delItem={this.delItem} index={index} ></CmtItem>)}
+           { this.state.CommentList.map((item,index)=><CmtItem {...item} key={index} delItem={this.delItem} index={index} ></CmtItem>)}
 
           {/*  表单提交 */}
 
-           <div className='comment'>
-               <input type="text" value={this.state.text} onChange={this.txtChange} ></input>
-               <button onClick={this.submit}> 提交</button>
-           </div>
+          <Comment submit={this.submit}></Comment>
         </div>
     }
 
